@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+a:hover{
+	text-decoration: none;
+}
+html{
+	font-family: 'Source Sand Pro', sans-serif;
+}
+body {
+		height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #272727;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+}
+
+nav {
+	position: fixed;
+	margin-left: -85px;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0px;
+}
+nav ul li{
+	transform: translateX(-65%);
+	padding: 25px;
+	margin: 50px;
+	background-color: #272727;
+	border-radius: 25px;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+
+}
+
+.select_li{
+		background-color: #ffffff;
+		transform: translateX(-0%);
+}
+
+#searchbar{
+	width: 100%;
+	margin:0px;
+}
+#researchDiv{
+	width: 60%;
+	padding: 0px;
+	margin:15px;
+	position: relative;
+}
+
+
+
+#searchbar:focus + ul {
+	display: block;
+
+}
+
+#researchDiv >ul:hover {
+	display: block;
+}
+
+#researchDiv > ul:hover > li:hover{
+	background-color: grey;
+}
+#researchDiv > ul{
+	display: none;
+	padding: 0px;
+	text-align: left;
+	width: 100%;
+	position: absolute;
+	margin: 0px;
+	margin-top:5px;
+	left:0px;
+	top:40px;
+	list-style: none;
+}
+
+#researchDiv > ul > li{
+	border-radius: 5px;
+
+	opacity: 0.95;
+	display: flex;
+	width: 100%;
+	margin:0px;
+	margin-top:1px;
+	border: 2px solid #fed766;
+	/* #80bdff */
+	background-color: #f7f8ff;
+}
+#researchDiv> ul > li>a{
+	font-size: 18px;
+	margin:0px;
+	color:black;
+
+	padding:20px;
+	padding-left: 15px;
+	width: 100%;
+}
+
+
+.icon {
+	margin-left: 0px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  z-index: 3;
+
+}
+
+.unselect{
+	filter: invert(45%) sepia(18%) saturate(187%) hue-rotate(17deg) brightness(92%) contrast(87%);
+
+}
+
+.select{
+	filter: invert(81%) sepia(48%) saturate(506%) hue-rotate(345deg) brightness(101%) contrast(103%);
+
+}
+.icon-cloud{
+	background-image: url(../svg/cloud.svg);
+}
+
+.icon-bell{
+	background-image: url(../svg/bell.svg);
+
+}
+
+.icon-home{
+	background-image: url(../svg/home.svg);
+}
+main{
+	position: absolute;
+	left:6%;
+	width: 94%;
+	background-color: #ffffff;
+	border-radius: 50px 0px 0px 50px;
+	min-height: 100%;
+	z-index: 2;
+}
+.row2{
+	margin:30px;
+	display: flex;
+	flex-direction: column;
+	width: 92%;
+	margin-left: 40px;
+	padding: 5px;
+
+}
+
+
+.row2 > div{
+	display: flex;
+	flex-direction: column;
+	padding: 25px;
+	margin: 0px;
+	min-height: 100px;
+	max-height: 500px;
+	width: 100%;
+	margin-top:20px;
+
+	border-radius: 25px;
+	background-color: #f7f8ff;
+
+}
+
+.row2 div p{
+	margin: 0px;
+	margin-top: 15px;
+	text-align: left;
+	align-self: left;
+}
+
+.imgSignals{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	position: relative;
+	width: 100%;
+	background: #ffffff;
+	margin: 20px;
+	margin-left: 0%;
+	margin-bottom: 0px;
+	align-items: center;
+}
+main > div{
+	margin-left: 40px;
+}
+main > .row{
+	display: flex;
+	padding: 5px;
+
+}
+
+.InputBar{
+	margin:30px;
+	display: flex;
+	flex-direction: row;
+}
+.InputBar p{
+	justify-content: center;
+	align-self: center;
+	margin: 0px;
+	margin-left: 40px;
+}
+input{
+	width: 60%;
+	height: 40px;
+	background-color: #f7f8ff;
+	border:none;
+	border-radius: 10px;
+	padding-left:15px;
+	margin-left: 15px;
+	font-size: 20px;
+}
+
+
+.column{
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+}
+
+.row .column{
+	flex:5;
+	background-color: #ffffff;
+
+}
+
+.row>div{
+	flex:2;
+}
+.row{
+	flex-direction: row;
+}
+.row, .column, .first-row{
+	margin: 10px;
+	margin-top:0px;
+}
+
+.column{
+
+	margin-left: 30px;
+}
+.column > div{
+	margin-left: 0px;
+}
+.column > div p {
+	margin: 0px;
+}
+
+.first-row{
+	display: flex;
+	align-items: stretch;
+	width: 100%;
+	margin:0px;
+	padding: 0px;
+	justify-content: space-between;
+
+}
+.first-row > div{
+	display: flex;
+	border-radius: 16px;
+	margin:0px;
+	padding:5px;
+	justify-content: left;
+	align-items: center;
+	min-height: 70px;
+	min-width: 28%;
+	max-width: 33%;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+
+
+}
+
+.first-row > div > div{
+	display: block;
+	margin: 5px;
+}
+.event{
+	padding-left: 2em;
+	display: flex;
+	flex-direction: column;
+}
+
+.column_events{
+	background-color: #f7f8ff;
+	padding: .5em;
+	padding-left: 1em;
+	margin-bottom: 1em;
+	display: flex;
+	flex-direction: column;
+}
+.column_events > h2{
+	margin: 0;
+}
+.supp_btn{
+	align-self: flex-end;
+}
+
+.first-row .BackYellow{
+	background-color: #fed766;
+}
+
+
+.first-row img{
+	min-width: 50px;
+	padding: 0px;
+	margin: 0px 20px 0px 20px;
+
+}
+
+.first-row div h1{
+
+	margin: 0px;
+	margin-bottom: 6px;
+	color:#727167;
+	font-size: 12px;
+
+
+}
+
+.first-row div .strong{
+	font-size: 36px;
+	color:#000000;
+}
+
+.SecondSection{
+	align-items: flex-start;
+	margin: 0px;
+	flex:1;
+	display: flex;
+	flex-direction: column;
+}
+.SecondSection p{
+	margin: 0px;
+}
+.SecondSection > div{
+	display: block;
+	width: 100%;
+}
+.SecondSection > div > table{
+	width: 100%;
+}
+.formclick input{
+	width: 100%;
+}
+.bigGraph{
+	border-radius: 25px;
+	display: flex;
+	min-height: 500px;
+	background-color: #eff1f3;
+	padding: 10px;
+	margin:0px;
+	margin-top:20px;
+	align-items: stretch;
+
+
+}
+
+
+
+.Second-row{
+	display: flex;
+	width: 100%;
+	padding: 0px;
+	margin:0px;
+	margin-top:20px;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.Second-row > div{
+	border-radius: 18px;
+	display: block;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+	padding: 10px;
+	margin:0px;
+	width: 48%;
+
+}
+
+.imgSignals img{
+	margin-left: 0px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	z-index: 3;
+}
+.imgSignals div{
+	width: 30px;
+	height: 30px;
+}
+
+a{
+	margin: 0px;
+	padding: 0px;
+}
+img{
+	vertical-align: inherit;
+}
+
+.category{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	box-shadow: none;
+	margin: 0px;
+}
+
+textarea{
+	margin: 10px;
+	background-color: #f7f8ff;
+	border:none;
+	border-radius: 10px;
+	padding: 15px;
+	font-size: 20px;
+	width: 80%;
+	overflow: hidden;
+	resize: none;
+	min-height: 100px;
+}
+
+
+.file{
+	margin: 10px;
+	width: 80%;
+}
+
+
+
+ .delete {
+	 filter: invert(48%) sepia(43%) saturate(5730%) hue-rotate(1deg) brightness(106%) contrast(103%);
+ }
+
+ .location{
+	 filter: invert(39%) sepia(23%) saturate(1140%) hue-rotate(170deg) brightness(97%) contrast(97%);
+ }
+ .bulb{
+	 filter: invert(15%) sepia(0%) saturate(1617%) hue-rotate(216deg) brightness(91%) contrast(96%);
+ }
+
+.right_row{
+	display: flex;
+	flex-direction: column;
+}
+.profile_user{
+	flex:1;
+	display: flex;
+	flex-direction: column;
+}
+
+.profile_user>div{
+	display: flex;
+
+}
+ #division{
+	 flex-wrap: wrap;
+	 display: flex;
+ }
+
+ .div_all{
+	 display: flex;
+
+ }
+
+ .div_all > div{
+	 display: flex;
+	 flex:1;
+	 flex-direction: column;
+
+ }
+.button_div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+ .button_div > .ban_button{
+	background-color: #FF2626;
+
+}
+
+ .button_div > button{
+	 	margin: 10px;
+	 	background-color: #fed766;
+		border-radius: 25px;
+		padding:15px;
+		border: none;
+		box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+		width: 50%;
+ }
+
+
+
+
+
+#division:nth-child(1){
+	width: 100%;
+}
+
+ .nickname{
+	 color : #fed766;
+	 font-size: 58px;
+	 font-weight: bold;
+ }
+
+ .bigGraph>canvas{
+	 width: 50%;
+ 		align-items: stretch;
+ }
+
+ .hidden{
+	 display: none;
+ }
+
+@media screen and (max-width: 1000px) {
+	.bigGraph>canvas{
+		width: 100%;
+	}
+	.bigGraph{
+		flex-direction: column;
+	}
+
+	.row{
+		flex-direction: column;
+	}
+
+
+	.first-row{
+		flex-direction: column;
+		justify-content: stretch;
+		align-items: center;
+	}
+
+	.first-row > div{
+		margin-top: 10px;
+		max-width: 80vw;
+		width: 70vw;
+	}
+	.InputBar > p{
+		display: none;
+	}
+
+	.InputBar > #researchDiv{
+		width: 100%;
+	}
+
+	.div_all{
+		flex-direction: column;
+	}
+
+
+	.Second-row{
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	.Second-row > div{
+
+
+		padding: 10px;
+		margin-bottom:20px;
+		width: 100%;
+
+	}
+
+	main{
+		left:0px;
+		border-radius: 0px;
+		width: inherit;
+		height: auto;
+	}
+
+	nav{
+		margin-left: -40px;
+		z-index: 5;
+	}
+}

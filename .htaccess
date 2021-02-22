@@ -1,0 +1,2 @@
+ErrorDocument 404 /index.php?Err=1
+ErrorDocument 500 /index.php?Err=2

@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+header > div{
+	align-items: center;
+}
+
+input[type="text"]{
+    font-size:16px;
+}
+
+header > a {
+	color:black;
+	text-decoration: none;
+}
+
+header{
+		background-color: white;
+}
+
+hr{
+	margin: 1px auto;
+	width: 88%;
+}
+
+.header{
+
+	color:black;
+	display: flex;
+	width: 100%;
+	padding: 1em 8%;
+}
+
+.header > div{
+	flex:1;
+	display: flex;
+}
+
+.logo a{
+	width: auto;
+	display: flex;
+	align-items: center;
+}
+
+.search{
+	flex:2;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.search > ul{
+	position: absolute;
+	display: none;
+	z-index: 5;
+	margin-top: 2px;
+}
+
+.search > ul > li > a{
+	text-decoration: none;
+	color:black;
+	padding: 12px 20px;
+	flex:1;
+}
+
+
+.search > ul > li{
+	border: 1px solid lightblue;
+	padding:0px;
+	list-style: none;
+	margin: 2px;
+	background-color: #f5f7f9;
+	display: flex;
+	align-items: stretch;
+}
+
+.search:hover ul{
+	left:0px;
+	top:100%;
+	width: 100%;;
+	margin: 0px;
+	display: block;
+	padding: 0px;
+}
+
+.inputBar:focus + ul{
+	left:0px;
+	top:100%;
+	width: 100%;;
+	margin: 0px;
+	display: block;
+	padding: 0px;
+}
+
+.personnal{
+
+	flex:1;
+	display: flex;
+	justify-content: flex-end;
+	align-items: stretch;
+}
+
+.personnal > img,#user_img{
+	margin-left: 12px;
+	border-radius:50%;
+}
+
+#user_img{
+	width: 30px;
+	height: 30px;
+	border-radius:50%;
+	object-fit: cover;
+}
+
+#account_nav{
+	position: relative;
+}
+
+#account_nav > ul{
+	position: absolute;
+	display: none;
+	z-index: 5;
+	top:30px;
+	margin-top: 2px;
+	transform: translateX(calc(-100% + 42px));
+}
+
+#account_nav > ul > li > a{
+	text-decoration: none;
+	color:black;
+	padding: 12px 20px;
+	flex:1;
+}
+
+#account_nav > ul > li{
+	padding:0px;
+	list-style: none;
+	margin: 2px;
+	background-color: #f5f7f9;
+	display: flex;
+	align-items: stretch;
+}
+
+#account_nav:hover ul{
+	margin: 0px;
+	display: block;
+	padding: 0px;
+}
+
+#notif{
+	position: relative;
+}
+
+#notif > div{
+	position: absolute;
+	display: none;
+	z-index: 5;
+	top:30px;
+	margin-top: 2px;
+	transform: translateX(calc(-100% + 42px));
+	background : #EFF1F3;
+	border-radius : 23px 23px 23px 23px;
+}
+
+#notif > div > ul{
+	display: flex;
+	flex-direction: column;
+	margin: 12px 12px;
+	padding: 0;
+}
+
+
+#notif >div > ul > li{
+	width: 200px;
+	list-style: none;
+	margin: 2px;
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: stretch;
+	border-radius : 23px 23px 23px 23px;
+	padding: 0 10px;
+}
+
+#notif>div>p{
+	margin: 5px 0 0 15px;
+}
+
+.button_notif{
+	width : 192px;
+	height : 33px;
+	box-shadow : 5px 5px 5px rgba(0, 0, 0, 0.1);
+	border-radius : 17px;
+	background : #F8D57E;
+	text-align: center;
+	color: #727167 ;
+	padding-top: 4px;
+	font-size : 0.85rem;
+	font-weight: bold;
+	border: none;
+	margin: 5px 0 0 5px;
+}
+
+#notif:hover div{
+	margin: 0px;
+	display: block;
+	padding: 0px;
+}
+
+
+
+.search::before{
+	z-index: 10;
+			position: absolute;
+	    top: 17px;
+	    left: 15px;
+	    content: '';
+
+
+	    width: 15px;
+	    height: 15px;
+			background-image: url('../Images/search.png');
+			background-size: cover;
+
+}
+.inputBar{
+	position: relative;
+	transition: .3s ease;
+	outline: none;
+	padding: 12px 30px;
+	padding-left: 2.25em;
+
+	width: 100%;
+	border:none;
+	border-bottom:1px solid black;
+	box-shadow: 0px 0px 30px rgba(255,255,255,0.1);
+}
+
+
+
+.inputBar:focus {
+	border-color: #F8D57E;
+}
+
+.btn_co{
+	background-color: #F8D57E;
+	text-decoration: none;
+	border:2px solid #F8D57E;
+	padding: .5em 2em;
+	border-radius: 3em;
+	margin: 0 1em;
+	transition: .3s ease;
+	color:black;
+}
+
+.btn_co:hover{
+	background-color: white;
+}
+
+.personnal > div{
+	margin-right: 1em;
+	display: flex;
+	position: relative;
+	align-items: center;
+}
+
+.new_mess:after{
+	position: absolute;
+	top:0px;
+	left:16px;
+	content: '';
+	display: block;
+	background-color: red;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+}
+
+.new_notif:after{
+	position: absolute;
+	top:4px;
+	left:16px;
+	content: '';
+	display: block;
+	background-color: red;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+}
+.personnal > #message{
+
+
+}
+#message > a{
+	display: flex;
+	align-items: stretch;
+}
+@media screen and (max-width: 780px) {
+	.header{
+		padding: .5em 14px;
+	}
+}
+@media screen and (max-width: 700px) {
+	.inputBar{
+		display: none;
+	}
+	.search::before{
+		display: none;
+	}
+}

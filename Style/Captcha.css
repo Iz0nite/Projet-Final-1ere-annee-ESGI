@@ -1,0 +1,56 @@
+body{
+  margin:0px;
+  padding: 0px;
+}
+.captcha{
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* background-image: url('Logo.png');
+  background-size: 60vh; */
+  text-align: center;
+}
+
+.captcha > div {
+  flex:1;
+  display: flex;
+}
+
+.captcha > div >div {
+  flex:1;
+  background-image: url('../Images/Logo.png');
+  background-size: 120px;
+
+  background-repeat: no-repeat;
+}
+.Firsts > #firstImg{
+  background-position: 0vh 0vh;
+}
+.Firsts >#secondImg{
+  background-position: -40px 0vh ;
+}
+.Firsts >#thirdImg{
+  background-position: -80px 0vh;
+}
+
+.Seconds > #fourthImg{
+  background-position: 0vh -40px;
+}
+.Seconds >#fifthImg{
+  background-position: -40px -40px ;
+}
+.Seconds >#sixthImg{
+  background-position: -80px -40px;
+}
+
+.Third > #seventhImg{
+  background-position: 0vh -80px;
+}
+.Third >#eighthImg{
+  background-position: -40px -80px ;
+}
+.Third >#ninethImg{
+  background-position: -80px -80px;
+}

@@ -1,0 +1,161 @@
+CREATE DATABASE PROJETANNUEL;
+USE PROJETANNUEL;
+
+CREATE TABLE CONTRAT(
+nom VARCHAR(25) PRIMARY KEY,
+prix INTEGER
+);
+
+CREATE TABLE USERS(
+pseudo VARCHAR(25),
+nom VARCHAR(25),
+prenom VARCHAR(25),
+email VARCHAR(25),
+motdepasse VARCHAR (25),
+classement INTEGER,
+admin BOOLEAN,
+image VARCHAR(50),
+actif BOOLEAN,
+dateContrat DATE,
+contrat VARCHAR(25),
+FOREIGN KEY (contrat) REFERENCES CONTRAT (nom),
+PRIMARY KEY (pseudo, email)
+);
+
+CREATE TABLE DECK(
+nom VARCHAR(25),
+categorie VARCHAR(25),
+nbCommentaire INTEGER,
+nbLike INTEGER,
+description VARCHAR (200),
+region VARCHAR(25),
+date DATE,
+idDeck INTEGER PRIMARY KEY,
+pseudo VARCHAR(25),
+email VARCHAR(25),
+nbCarte VARCHAR(25),
+usersPseudo VARCHAR(25),
+usersEmail VARCHAR(25),
+FOREIGN KEY (usersPseudo, usersEmail) REFERENCES USERS(pseudo, email)
+);
+
+CREATE TABLE COMMENTAIRE(
+texte VARCHAR(100),
+idCommentaire INTEGER PRIMARY KEY,
+nbLike INTEGER,
+signale INTEGER,
+usersPseudo VARCHAR(25),
+usersEmail VARCHAR(25),
+deck INTEGER,
+date DATE,
+FOREIGN KEY (deck) REFERENCES DECK(idDeck),
+FOREIGN KEY (usersPseudo, usersEmail) REFERENCES USERS(pseudo, email)
+);
+
+CREATE TABLE CARTE(
+nom VARCHAR(25) PRIMARY KEY,
+region VARCHAR(25),
+cout INTEGER,
+type VARCHAR(25),
+rarete VARCHAR(25),
+date DATE,
+description VARCHAR(200),
+nbAttaque INTEGER,
+nbDefense INTEGER,
+image VARCHAR(50),
+usersPseudo VARCHAR(25),
+usersEmail VARCHAR(25),
+FOREIGN KEY (usersPseudo, usersEmail) REFERENCES USERS(pseudo, email)
+);
+
+CREATE TABLE TOPIC(
+idTopic INTEGER PRIMARY KEY,
+titre VARCHAR (50),
+texte TEXT,
+image VARCHAR(50),
+nbReponse INTEGER,
+nbLike INTEGER,
+date DATE,
+signale INTEGER,
+resolu BOOLEAN,
+usersPseudo VARCHAR(25),
+usersEmail VARCHAR(25),
+FOREIGN KEY (usersPseudo, usersEmail) REFERENCES USERS(pseudo, email)
+);
+
+CREATE TABLE REPONSE(
+texte TEXT,
+image VARCHAR(50),
+idReponse INTEGER PRIMARY KEY,
+signale INTEGER,
+date DATE,
+nbLike INTEGER,
+topic INTEGER,
+FOREIGN KEY (topic) REFERENCES TOPIC(idTopic)
+);
+
+CREATE TABLE RECOMPENSE(
+badges VARCHAR(50),
+idRecompense INTEGER PRIMARY KEY,
+nom VARCHAR(25)
+);
+
+CREATE TABLE FAVORIS(
+idFavoris INTEGER PRIMARY KEY,
+deck INTEGER,
+FOREIGN KEY (deck) REFERENCES DECK(idDeck)
+);
+
+CREATE TABLE POSSEDER(
+favoris INTEGER,
+usersPseudo VARCHAR(25),
+usersEmail VARCHAR(25),
+FOREIGN KEY (favoris) REFERENCES FAVORIS(idFavoris),
+FOREIGN KEY (usersPseudo, usersEmail) REFERENCES USERS(pseudo, email),
+PRIMARY KEY (favoris, usersPseudo, usersEmail)
+);
+
+CREATE TABLE OBTENIR(
+recompense INTEGER,
+usersPseudo VARCHAR(25),
+usersEmail VARCHAR(25),
+FOREIGN KEY (recompense) REFERENCES RECOMPENSE(idRecompense),
+FOREIGN KEY (usersPseudo, usersEmail) REFERENCES USERS(pseudo, email),
+PRIMARY KEY (recompense, usersPseudo, usersEmail)
+);
+
+CREATE TABLE CONTENIR(
+deck INTEGER,
+carte VARCHAR(25),
+FOREIGN KEY (deck) REFERENCES DECK(idDeck),
+FOREIGN KEY (carte) REFERENCES CARTE(nom),
+PRIMARY KEY (deck, carte)
+);
+
+CREATE TABLE SIGNALERREP(
+reponse INTEGER,
+usersPseudo VARCHAR(25),
+usersEmail VARCHAR(25),
+FOREIGN KEY (reponse) REFERENCES REPONSE(idReponse),
+FOREIGN KEY (usersPseudo, usersEmail) REFERENCES USERS(pseudo, email),
+PRIMARY KEY (reponse, usersPseudo, usersEmail)
+);
+
+CREATE TABLE SIGNALERCOM(
+commentaire INTEGER,
+usersPseudo VARCHAR(25),
+usersEmail VARCHAR(25),
+FOREIGN KEY (commentaire) REFERENCES COMMENTAIRE(idCommentaire),
+FOREIGN KEY (usersPseudo, usersEmail) REFERENCES USERS(pseudo, email),
+PRIMARY KEY (commentaire, usersPseudo, usersEmail)
+);
+
+CREATE TABLE SIGNALERTOP(
+topic INTEGER,
+usersPseudo VARCHAR(25),
+usersEmail VARCHAR(25),
+FOREIGN KEY (topic) REFERENCES TOPIC(idTopic),
+FOREIGN KEY (usersPseudo, usersEmail) REFERENCES USERS(pseudo, email),
+PRIMARY KEY (topic, usersPseudo, usersEmail)
+);
+

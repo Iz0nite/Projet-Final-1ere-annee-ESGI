@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users>
+  <user id="19" nickname="brycedd" name="Brycedd" second_name="Mathieudd" email="bryce.mathieu.1s1@gmail.com" country="France" birth="2001-04-17" type="user"/>
+  <user id="20" nickname="Armand" name="Armand" second_name="De Faria Leite" email="armanddfl@gmail.com" country="France" birth="2001-12-26" type="admin"/>
+  <user id="21" nickname="Titoine955" name="Antoine" second_name="Lorin" email="Antoine.lorin3@gmail.com" country="France" birth="2001-04-17" type="user"/>
+  <user id="24" nickname="Titoine95" name="Antoine" second_name="Lorin" email="Antoine.lorin2@gmail.com" country="France" birth="2001-04-17" type="admin"/>
+  <user id="26" nickname="Marcobich" name="Marco" second_name="Bich" email="Marcobich@gmail.com" country="Germany" birth="2004-04-06" type="user"/>
+  <user id="27" nickname="Marcobich2" name="Marco" second_name="Bich" email="Marcobich2@gmail.com" country="Germany" birth="1999-04-06" type="user"/>
+  <user id="28" nickname="Marcobich3" name="Marco3" second_name="Bich" email="Marcobich3@gmail.com" country="Puerto Rico" birth="1988-04-06" type="user"/>
+  <user id="29" nickname="Marcobich4" name="Marco4" second_name="Bich" email="Marcobich4@gmail.com" country="Switzerland" birth="2006-04-06" type="user"/>
+  <user id="30" nickname="Marcobich5" name="Marco" second_name="Bich" email="Marcobich5@gmail.com" country="Puerto Rico" birth="1975-04-17" type="user"/>
+  <user id="31" nickname="Marcobich6" name="Marco" second_name="Bich" email="Marcobich6@gmail.com" country="Puerto Rico" birth="2002-04-17" type="user"/>
+  <user id="33" nickname="robin78" name="robin" second_name="marcon" email="marconr@orange.fr" country="France" birth="1998-04-17" type="admin"/>
+  <user id="35" nickname="Lil-Shibe" name="Thibault" second_name="GADOUD" email="ttgadoud@orange.fr" country="France" birth="2001-06-17" type="user"/>
+  <user id="37" nickname="Ledémon" name="Antoine" second_name="Lorin" email="Antoine.lorin6@gmail.com" country="France" birth="2001-04-17" type="user"/>
+  <user id="38" nickname="La petite pute" name="Petite" second_name="Pute" email="La_petite_pute@gmail.com" country="Zimbabwe" birth="2004-04-17" type="user"/>
+  <user id="39" nickname="Quentinv" name="Quentin" second_name="Vitoux" email="quentin010801@gmail.com" country="France" birth="2001-08-01" type="user"/>
+  <user id="40" nickname="Je_vais_me_tirer_une_balle" name="AYAYAA" second_name="LOLOLOL" email="AAAAAAAAAAAAA@gmail.com" country="Bahrain" birth="1965-05-04" type="user"/>
+</users>

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+html{
+	font-family: 'Source Sand Pro', sans-serif;
+	overflow-x: hidden;
+}
+body{
+  margin:0px;
+  padding: 0px;
+}
+.form-control{
+	border:2px solid black;
+}
+nav{
+  height: 100px;
+  width: auto;
+  background: lightblue;
+}
+
+.ErrorMsg{
+	text-align: center;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 20px;
+	width:60%;
+}
+.center{
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  margin: 0 auto;
+  width:70%;
+  background: #272727;
+	color : white;
+  margin-top:100px;
+}
+.line{
+  width: 2px;
+  height: auto;
+  background-color: white;
+}
+.center section{
+  flex:1;
+  text-align: center;
+
+}
+.center section form{
+  margin:20px;
+  margin-left:10%;
+  width: 80%;
+}
+
+.center form{
+	flex:1;
+}
+
+.flexSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.SectionMult{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	}
+.rowDiv{
+	display: flex;
+	flex-direction: column;
+	}
+
+.captchaDiv{
+	display: flex;
+	justify-content: center;
+}
+.element{
+	width: 45%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.colorYellow{
+	background-color: #fed766;
+}
+
+.captcha_explain{
+	margin-bottom: 3em;
+	width: 90%;
+	display: flex;
+	justify-content: space-around;
+	align-self: center;
+}
+
+.captcha_explain>div{
+	flex:1;
+}
+.captcha_control{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
+.explain{
+	display: flex;
+	flex-direction: column;
+	flex:2;
+
+}
+.explain>*{
+
+	text-align: left;
+}
+.item:before{
+	content:'';
+	width: 25px;
+	height: 25px;
+	background-image: url('../Images/red_cross.png');
+	background-size: cover;
+	background-color: white;
+}
+
+@media (max-width: 768px) {
+	.center{
+		flex-direction: column;
+	}
+	.line{
+		width: auto;
+		height: 2px;
+	}
+	.SectionMult{
+		flex-direction: column;
+	}
+	.element{
+		width: 80%;
+		margin: 0 auto;
+	}
+}
